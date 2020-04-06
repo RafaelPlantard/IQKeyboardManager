@@ -25,14 +25,11 @@ jobs:
       run: carthage build --no-skip-current
     
     - name: Archive
-      run: carthage archive $FRAMEWORK_NAME
-      env:
-        FRAMEWORK_NAME: IQKeyboardManager
+      run: carthage archive IQKeyboardManager
     
     - name: Release
       uses: yakuhzi/action-release@v1.2.0
       with:
-        file: $FRAMEWORK_NAME.zip
+        file: IQKeyboardManager.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-        FRAMEWORK_NAME: IQKeyboardManager
