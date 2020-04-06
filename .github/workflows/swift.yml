@@ -26,6 +26,8 @@ jobs:
     
     - name: Archive
       run: carthage archive $FRAMEWORK_NAME
+      env:
+        FRAMEWORK_NAME: IQKeyboardManager
     
     - name: Release
       uses: yakuhzi/action-release@v1.2.0
@@ -33,3 +35,4 @@ jobs:
         file: $FRAMEWORK_NAME.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        FRAMEWORK_NAME: IQKeyboardManager
