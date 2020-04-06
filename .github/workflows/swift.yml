@@ -30,6 +30,6 @@ jobs:
     - name: Release
       uses: yakuhzi/action-release@v1.2.0
       with:
-        file: IQKeyboardManager.zip
+        file: IQKeyboardManager.framework.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
